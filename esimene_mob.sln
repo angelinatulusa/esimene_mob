@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "esimene_mob.Android", "esimene_mob.Android\esimene_mob.Android.csproj", "{243528FE-8126-4524-AD6A-AE2A5463B530}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "esimene_mob", "esimene_mob\esimene_mob.csproj", "{0BE87565-D7CA-4F02-927C-DD2990CA6CC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{243528FE-8126-4524-AD6A-AE2A5463B530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243528FE-8126-4524-AD6A-AE2A5463B530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243528FE-8126-4524-AD6A-AE2A5463B530}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{243528FE-8126-4524-AD6A-AE2A5463B530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243528FE-8126-4524-AD6A-AE2A5463B530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243528FE-8126-4524-AD6A-AE2A5463B530}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0BE87565-D7CA-4F02-927C-DD2990CA6CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE87565-D7CA-4F02-927C-DD2990CA6CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE87565-D7CA-4F02-927C-DD2990CA6CC6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0BE87565-D7CA-4F02-927C-DD2990CA6CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE87565-D7CA-4F02-927C-DD2990CA6CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE87565-D7CA-4F02-927C-DD2990CA6CC6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B849471A-09A6-449C-9B4A-B9B471DEB736}
+	EndGlobalSection
+EndGlobal
