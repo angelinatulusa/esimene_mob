@@ -12,7 +12,7 @@ namespace esimene_mob
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class start_page : ContentPage
     {
-        List<ContentPage> contentPages = new List<ContentPage>() { new text_page(), new timer_page(), new box_page(), new sender_page(), new colors(),  new datetime_page(), new tripstraptrull()};
+        List<ContentPage> contentPages = new List<ContentPage>() { new text_page(), new timer_page(), new box_page(), new sender_page(), new colors(),  new datetime_page(), new tripstraptrull(), new carousel()};
         string[] tekstid ={ "Text page", "Timer", "BoxView","Stepper", "RGB colors", "Date time", "Trips Traps Trull"};
         public start_page()
         {

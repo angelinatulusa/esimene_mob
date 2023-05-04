@@ -13,6 +13,7 @@ namespace esimene_mob
     public partial class tripstraptrull : ContentPage
     {
         Grid kast;
+        Label lbl;
         Image img;
         Button reeglid, stop, start;
         StackLayout st;
@@ -56,9 +57,35 @@ namespace esimene_mob
             klik = 0;
             st.Children.Clear();
             mang();
+            //st.Children.Add(lbl);
             st.Children.Add(kast);
             st.Children.Add(reeglid);
             st.Children.Add(stop);
+        }
+        string a = "x";
+        private void Tap_Tapped(object sender, EventArgs e)
+        {
+            img = sender as Image;
+            var r = Grid.GetRow(img);
+            var c = Grid.GetColumn(img);
+            klik += 1;
+            if (a == "x")
+            {
+                img.Source = pl1.SelectedItem + ".png";
+                a = "o";
+                Tulemused[r, c] = 1;
+            }
+            else if (a == "o")
+            {
+                img.Source = pl2.SelectedItem + ".png";
+                a = "x";
+                Tulemused[r, c] = 2;
+            }
+            else
+            {
+                DisplayAlert("!!!", "See väli on juba hõivatud", "OK");
+            }
+            lopp();
         }
         public void mang()
         {
@@ -78,6 +105,14 @@ namespace esimene_mob
                     img.GestureRecognizers.Add(tap);
                     tap.Tapped += Tap_Tapped;
                 }
+            }
+            if (a=="x")
+            {
+                DisplayAlert("....", pl1.SelectedItem + " kõnnib praegu", "Ok");
+            }
+            else if (a == "o")
+            {
+                DisplayAlert("....", pl2.SelectedItem + " kõnnib praegu", "Ok");
             }
             reeglid = new Button
             {
@@ -113,31 +148,6 @@ namespace esimene_mob
         private void Reeglid_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Reeglid", "Üks mängija mängib \"ristiga\", teine \"nulliga\". Mäng vormistatakse järgmiselt:. Ristiga mängija alustab ja joonistab risti keskele. Nulliga mängija joonistab nulli ükskõik millisesse ülejäänud ruutu. Mängu eesmärgiks on saada ritta (kas diagonaalis, ülevalt alla või vasakult paremale) kolm ühesugust kujundit ja takistada teisel seda saamast. Mängu võitja ongi see, kes kolm \"oma\" kujundit ritta saab. Mängu mängivad algklasside ja põhikooli õpilased. See on tuntud üle Eesti.", "OK");
-        }
-        string a = "x";
-        private void Tap_Tapped(object sender, EventArgs e)
-        {
-            img = sender as Image;
-            var r = Grid.GetRow(img);
-            var c = Grid.GetColumn(img);
-            klik += 1;
-            if (a == "x")
-            {
-                img.Source = pl1.SelectedItem + ".png";
-                a = "o";
-                Tulemused[r, c] = 1;
-            }
-            else if (a == "o")
-            {
-                img.Source = pl2.SelectedItem + ".png";
-                a = "x";
-                Tulemused[r, c] = 2;
-            }
-            else
-            {
-                DisplayAlert("!!!", "See väli on juba hõivatud", "OK");
-            }
-            lopp();
         }
         private int kontroll()
         {
